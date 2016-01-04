@@ -6,9 +6,9 @@
 <p><%= @recipe.description %></p>
 
 <h3>Ingredients:</h3>
-<% @recipe.ingredients.each do |ingredient| %>
-  <p><%= ingredient %></p>
-  <p><%= ingredient.name %></p>
+<% @recipe.quantities.each do |quantity| %>
+  <p><%= quantity.ingredient.name %></p>
+  <p><%= quantity.amount %></p>
 <% end %>
 
 <h3>Instructions:</h3>
