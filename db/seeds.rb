@@ -28,10 +28,10 @@ i5 = Ingredient.create!(name: 'frozen petits pois')
 Quantity.delete_all
 
 Quantity.create!(ingredient_id: i1.id,recipe_id: r1.id, amount: '500g')
-Quantity.create!(ingredient_id: i2.id,recipe_id: r1.id, amount: '100g')
-Quantity.create!(ingredient_id: i3.id,recipe_id: r1.id, amount: '200g')
-Quantity.create!(ingredient_id: i4.id,recipe_id: r1.id, amount: '300g')
-Quantity.create!(ingredient_id: i5.id,recipe_id: r1.id, amount: '400g')
+Quantity.create!(ingredient_id: i2.id,recipe_id: r1.id, amount: '200g')
+Quantity.create!(ingredient_id: i3.id,recipe_id: r1.id, amount: '8')
+Quantity.create!(ingredient_id: i4.id,recipe_id: r1.id, amount: '2tbsp')
+Quantity.create!(ingredient_id: i5.id,recipe_id: r1.id, amount: '100g')
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
