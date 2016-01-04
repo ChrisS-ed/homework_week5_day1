@@ -24,11 +24,14 @@ i3 = Ingredient.create!(name: 'large eggs')
 i4 = Ingredient.create!(name: 'chopped dill')
 i5 = Ingredient.create!(name: 'frozen petits pois')
 
-Recipe.find(r1.id).ingredients << Ingredient.all
 
 Quantity.delete_all
 
 Quantity.create!(ingredient_id: i1.id,recipe_id: r1.id, amount: '500g')
+Quantity.create!(ingredient_id: i2.id,recipe_id: r1.id, amount: '100g')
+Quantity.create!(ingredient_id: i3.id,recipe_id: r1.id, amount: '200g')
+Quantity.create!(ingredient_id: i4.id,recipe_id: r1.id, amount: '300g')
+Quantity.create!(ingredient_id: i5.id,recipe_id: r1.id, amount: '400g')
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
