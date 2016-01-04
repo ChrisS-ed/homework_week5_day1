@@ -1,0 +1,15 @@
+<%= form_for @recipe do |f| %>
+   <%= f.label :name %>
+   <%= f.text_field :name %>
+   <br>
+   <%= f.label :description %>
+   <%= f.text_field :description %>
+   <br>
+   <%= f.label :instructions %>
+   <%= f.text_field :instructions %>
+   <br>
+   <%= f.label :category %>
+   <%= f.collection_select :category_id, @categories, :id, :name, :prompt => true %>
+   <br>
+   <%= f.submit 'Save changes' %>
+ <% end %>

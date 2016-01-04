@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cookbook App 2</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><%= link_to('Show all recipes', recipes_path) %></li>
+    <li><%= link_to('Create new recipe', new_recipe_path) %></li>
+    <li><%= link_to('Show all categories', categories_path) %></li>
+  </ul>
+</nav>
+
+<%= yield %>
+
+<nav>
+  <ul>
+    <li><%= link_to('Create new category', new_category_path) %></li>
+  </ul>
+</nav>
+
+</body>
+</html>

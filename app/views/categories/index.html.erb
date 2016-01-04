@@ -1,0 +1,8 @@
+<% @categories.each do |category| %>
+  <%= category.name %>
+  <br>
+  <%= link_to('Edit category', edit_category_path(category)) %>
+  <br>
+  <%= button_to('Delete category', category_path(category), method: :delete, data: {confirm: 'Delete category? Are you sure?'} ) %>
+  <br>
+<% end %>

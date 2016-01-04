@@ -1,0 +1,16 @@
+<h1><%= @recipe.name %></h1>
+
+<h3>Category: <%= @recipe.category.name %></h3>
+
+<h3>Description:</h3>
+<p><%= @recipe.description %></p>
+
+<h3>Ingredients:</h3>
+<% @recipe.ingredients.each do |ingredient| %>
+  <p><%= ingredient.name %></p>
+<% end %>
+
+<h3>Instructions:</h3>
+<p><%= @recipe.instructions %></p>
+
+<%= link_to('Edit recipe', edit_recipe_path(@recipe)) %>

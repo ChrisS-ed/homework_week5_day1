@@ -1,0 +1,10 @@
+<% @recipes.each do |recipe| %>
+    <%= recipe.name %>
+    <br>
+    Category: <%= recipe.category.name %>
+    <% @category = recipe.category %>
+    <%= link_to("Click to see all recipes in this category", category_path(@category)) %>
+    <%= button_to('Delete recipe', recipe_path(recipe), method: :delete, data: {confirm: 'Delete recipe? Are you sure?'} ) %>
+    <%= link_to("Show me this recipe", recipe_path(recipe)) %>
+    <br><br>
+  <% end %>
