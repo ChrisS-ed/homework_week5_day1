@@ -11025,3 +11025,490 @@ Processing by RecipesController#index as HTML
   [1m[36mCategory Load (0.4ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 6]]
   Rendered recipes/index.html.erb within layouts/application (8.0ms)
 Completed 200 OK in 37ms (Views: 33.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/recipes/4" for ::1 at 2016-01-04 15:13:45 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mIngredient Load (0.6ms)[0m  SELECT "ingredients".* FROM "ingredients" INNER JOIN "quantities" ON "ingredients"."id" = "quantities"."ingredient_id" WHERE "quantities"."recipe_id" = $1  [["recipe_id", 4]]
+  Rendered recipes/show.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 48ms (Views: 41.2ms | ActiveRecord: 3.4ms)
+  [1m[36mIngredient Load (0.5ms)[0m  [1mSELECT "ingredients".* FROM "ingredients"[0m
+  [1m[35mRecipe Load (0.9ms)[0m  SELECT  "recipes".* FROM "recipes"  ORDER BY "recipes"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.9ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  ORDER BY "recipes"."id" ASC LIMIT 1[0m
+  [1m[35mIngredient Load (0.5ms)[0m  SELECT "ingredients".* FROM "ingredients" INNER JOIN "quantities" ON "ingredients"."id" = "quantities"."ingredient_id" WHERE "quantities"."recipe_id" = $1  [["recipe_id", 4]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.7ms)[0m  DELETE FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Meat"], ["created_at", "2016-01-04 15:18:22.754344"], ["updated_at", "2016-01-04 15:18:22.754344"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fish"], ["created_at", "2016-01-04 15:18:22.760607"], ["updated_at", "2016-01-04 15:18:22.760607"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Dessert"], ["created_at", "2016-01-04 15:18:22.762669"], ["updated_at", "2016-01-04 15:18:22.762669"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "recipes"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "description", "instructions", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["name", "Slow-cooked lamb with onions & thyme"], ["description", "Five ingredients, one pot, no effort. This meltingly tender lamb dish is satisfyingly rich, and virtually cooks itself."], ["instructions", "1. Firstly, prepare the lamb. Heat oven to 160C/fan140C/gas 3. Wipe the meat all over and season well. Heat 3 tbsp of olive oil in a large heavy flameproof casserole, add the meat and fry all over on a fairly high heat for about 8 mins, turning until it is evenly well browned. Remove to a plate."], ["category_id", 7], ["created_at", "2016-01-04 15:18:22.774705"], ["updated_at", "2016-01-04 15:18:22.774705"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "description", "instructions", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Smoked salmon & pea frittata"], ["description", "A great dish for the spring, with the combination of smoked salmon and eggs giving this dish an interesting flavour."], ["instructions", "1. Thickly slice the potatoes and cook in a pan of boiling salted water until just tender, about 10 minutes. Drain well and leave to cool slightly."], ["category_id", 8], ["created_at", "2016-01-04 15:18:22.776904"], ["updated_at", "2016-01-04 15:18:22.776904"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "description", "instructions", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["name", "Very berry ice"], ["description", "Try this fruity iced pud - a fantastic and fat-free dinner party dessert."], ["instructions", "1. Hull and chop fruit, then tip them into a bowl with the sugar and lemon juice. Bring a kettle of hot water to the boil and pour over 300ml boiling water. Leave everything to macerate until cool, then blitz in a food processor until smooth. Push the purée through a sieve."], ["category_id", 9], ["created_at", "2016-01-04 15:18:22.778623"], ["updated_at", "2016-01-04 15:18:22.778623"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "ingredients"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "new potatoes"], ["created_at", "2016-01-04 15:18:22.785673"], ["updated_at", "2016-01-04 15:18:22.785673"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "smoked salmon"], ["created_at", "2016-01-04 15:18:22.787825"], ["updated_at", "2016-01-04 15:18:22.787825"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "large eggs"], ["created_at", "2016-01-04 15:18:22.789327"], ["updated_at", "2016-01-04 15:18:22.789327"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "chopped dill"], ["created_at", "2016-01-04 15:18:22.790872"], ["updated_at", "2016-01-04 15:18:22.790872"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "frozen petits pois"], ["created_at", "2016-01-04 15:18:22.792827"], ["updated_at", "2016-01-04 15:18:22.792827"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mIngredient Load (0.3ms)[0m  [1mSELECT "ingredients".* FROM "ingredients"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "quantities" ("recipe_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["recipe_id", 7], ["ingredient_id", 11], ["created_at", "2016-01-04 15:18:22.819381"], ["updated_at", "2016-01-04 15:18:22.819381"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "quantities" ("recipe_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["recipe_id", 7], ["ingredient_id", 12], ["created_at", "2016-01-04 15:18:22.822482"], ["updated_at", "2016-01-04 15:18:22.822482"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "quantities" ("recipe_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["recipe_id", 7], ["ingredient_id", 13], ["created_at", "2016-01-04 15:18:22.824215"], ["updated_at", "2016-01-04 15:18:22.824215"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "quantities" ("recipe_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["recipe_id", 7], ["ingredient_id", 14], ["created_at", "2016-01-04 15:18:22.826330"], ["updated_at", "2016-01-04 15:18:22.826330"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "quantities" ("recipe_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["recipe_id", 7], ["ingredient_id", 15], ["created_at", "2016-01-04 15:18:22.828240"], ["updated_at", "2016-01-04 15:18:22.828240"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+
+
+Started GET "/recipes/4" for ::1 at 2016-01-04 15:18:33 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 404 Not Found in 27ms (ActiveRecord: 4.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=4):
+  app/controllers/recipes_controller.rb:8:in `show'
+
+
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.7ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.1ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (29.4ms)
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategories (20151215123116)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (5.0ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151215123116"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRecipes (20151215123211)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "recipes" ("id" serial primary key, "name" character varying, "description" text, "instructions" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151215123211"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddCategoryIdToRecipes (20151216172212)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "recipes" ADD "category_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151216172212"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateIngredients (20151220175652)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "ingredients" ("id" serial primary key, "name" character varying, "quantity" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151220175652"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateJoinTableIngredientRecipe (20151220190304)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "ingredients_recipes" ("ingredient_id" integer NOT NULL, "recipe_id" integer NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151220190304"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateQuantities (20160104135848)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "quantities" ("id" serial primary key, "ingredient_id" integer, "recipe_id" integer, "amount" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160104135848"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to RemoveQuantityFromIngredients (20160104140817)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "ingredients" DROP "quantity"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160104140817"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (3.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'ingredients'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'ingredients_recipes'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.2ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'quantities'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (3.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'recipes'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Meat"], ["created_at", "2016-01-04 15:19:16.185089"], ["updated_at", "2016-01-04 15:19:16.185089"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fish"], ["created_at", "2016-01-04 15:19:16.189995"], ["updated_at", "2016-01-04 15:19:16.189995"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Dessert"], ["created_at", "2016-01-04 15:19:16.192397"], ["updated_at", "2016-01-04 15:19:16.192397"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "recipes"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "recipes" ("name", "description", "instructions", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["name", "Slow-cooked lamb with onions & thyme"], ["description", "Five ingredients, one pot, no effort. This meltingly tender lamb dish is satisfyingly rich, and virtually cooks itself."], ["instructions", "1. Firstly, prepare the lamb. Heat oven to 160C/fan140C/gas 3. Wipe the meat all over and season well. Heat 3 tbsp of olive oil in a large heavy flameproof casserole, add the meat and fry all over on a fairly high heat for about 8 mins, turning until it is evenly well browned. Remove to a plate."], ["category_id", 1], ["created_at", "2016-01-04 15:19:16.204209"], ["updated_at", "2016-01-04 15:19:16.204209"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("name", "description", "instructions", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Smoked salmon & pea frittata"], ["description", "A great dish for the spring, with the combination of smoked salmon and eggs giving this dish an interesting flavour."], ["instructions", "1. Thickly slice the potatoes and cook in a pan of boiling salted water until just tender, about 10 minutes. Drain well and leave to cool slightly."], ["category_id", 2], ["created_at", "2016-01-04 15:19:16.206746"], ["updated_at", "2016-01-04 15:19:16.206746"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("name", "description", "instructions", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["name", "Very berry ice"], ["description", "Try this fruity iced pud - a fantastic and fat-free dinner party dessert."], ["instructions", "1. Hull and chop fruit, then tip them into a bowl with the sugar and lemon juice. Bring a kettle of hot water to the boil and pour over 300ml boiling water. Leave everything to macerate until cool, then blitz in a food processor until smooth. Push the purée through a sieve."], ["category_id", 3], ["created_at", "2016-01-04 15:19:16.208586"], ["updated_at", "2016-01-04 15:19:16.208586"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "ingredients"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "new potatoes"], ["created_at", "2016-01-04 15:19:16.215798"], ["updated_at", "2016-01-04 15:19:16.215798"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "smoked salmon"], ["created_at", "2016-01-04 15:19:16.218476"], ["updated_at", "2016-01-04 15:19:16.218476"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "large eggs"], ["created_at", "2016-01-04 15:19:16.220646"], ["updated_at", "2016-01-04 15:19:16.220646"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "chopped dill"], ["created_at", "2016-01-04 15:19:16.222524"], ["updated_at", "2016-01-04 15:19:16.222524"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "frozen petits pois"], ["created_at", "2016-01-04 15:19:16.224343"], ["updated_at", "2016-01-04 15:19:16.224343"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mIngredient Load (0.3ms)[0m  [1mSELECT "ingredients".* FROM "ingredients"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "quantities" ("recipe_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["recipe_id", 1], ["ingredient_id", 1], ["created_at", "2016-01-04 15:19:16.254539"], ["updated_at", "2016-01-04 15:19:16.254539"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "quantities" ("recipe_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["recipe_id", 1], ["ingredient_id", 2], ["created_at", "2016-01-04 15:19:16.257358"], ["updated_at", "2016-01-04 15:19:16.257358"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "quantities" ("recipe_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["recipe_id", 1], ["ingredient_id", 3], ["created_at", "2016-01-04 15:19:16.259255"], ["updated_at", "2016-01-04 15:19:16.259255"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "quantities" ("recipe_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["recipe_id", 1], ["ingredient_id", 4], ["created_at", "2016-01-04 15:19:16.260957"], ["updated_at", "2016-01-04 15:19:16.260957"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "quantities" ("recipe_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["recipe_id", 1], ["ingredient_id", 5], ["created_at", "2016-01-04 15:19:16.262614"], ["updated_at", "2016-01-04 15:19:16.262614"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+
+
+Started GET "/recipes/4" for ::1 at 2016-01-04 15:19:30 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mRecipe Load (0.6ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 404 Not Found in 24ms (ActiveRecord: 3.7ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Recipe with 'id'=4):
+  app/controllers/recipes_controller.rb:8:in `show'
+
+
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.4ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.6ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (29.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.8ms)[0m  DELETE FROM "categories"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Meat"], ["created_at", "2016-01-04 15:20:01.571578"], ["updated_at", "2016-01-04 15:20:01.571578"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fish"], ["created_at", "2016-01-04 15:20:01.577526"], ["updated_at", "2016-01-04 15:20:01.577526"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Dessert"], ["created_at", "2016-01-04 15:20:01.580101"], ["updated_at", "2016-01-04 15:20:01.580101"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "recipes"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("name", "description", "instructions", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["name", "Slow-cooked lamb with onions & thyme"], ["description", "Five ingredients, one pot, no effort. This meltingly tender lamb dish is satisfyingly rich, and virtually cooks itself."], ["instructions", "1. Firstly, prepare the lamb. Heat oven to 160C/fan140C/gas 3. Wipe the meat all over and season well. Heat 3 tbsp of olive oil in a large heavy flameproof casserole, add the meat and fry all over on a fairly high heat for about 8 mins, turning until it is evenly well browned. Remove to a plate."], ["category_id", 4], ["created_at", "2016-01-04 15:20:01.592539"], ["updated_at", "2016-01-04 15:20:01.592539"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "recipes" ("name", "description", "instructions", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Smoked salmon & pea frittata"], ["description", "A great dish for the spring, with the combination of smoked salmon and eggs giving this dish an interesting flavour."], ["instructions", "1. Thickly slice the potatoes and cook in a pan of boiling salted water until just tender, about 10 minutes. Drain well and leave to cool slightly."], ["category_id", 5], ["created_at", "2016-01-04 15:20:01.595415"], ["updated_at", "2016-01-04 15:20:01.595415"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "recipes" ("name", "description", "instructions", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["name", "Very berry ice"], ["description", "Try this fruity iced pud - a fantastic and fat-free dinner party dessert."], ["instructions", "1. Hull and chop fruit, then tip them into a bowl with the sugar and lemon juice. Bring a kettle of hot water to the boil and pour over 300ml boiling water. Leave everything to macerate until cool, then blitz in a food processor until smooth. Push the purée through a sieve."], ["category_id", 6], ["created_at", "2016-01-04 15:20:01.598077"], ["updated_at", "2016-01-04 15:20:01.598077"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "ingredients"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "new potatoes"], ["created_at", "2016-01-04 15:20:01.607398"], ["updated_at", "2016-01-04 15:20:01.607398"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "smoked salmon"], ["created_at", "2016-01-04 15:20:01.609642"], ["updated_at", "2016-01-04 15:20:01.609642"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "large eggs"], ["created_at", "2016-01-04 15:20:01.611346"], ["updated_at", "2016-01-04 15:20:01.611346"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "chopped dill"], ["created_at", "2016-01-04 15:20:01.612910"], ["updated_at", "2016-01-04 15:20:01.612910"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "ingredients" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "frozen petits pois"], ["created_at", "2016-01-04 15:20:01.614464"], ["updated_at", "2016-01-04 15:20:01.614464"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mIngredient Load (0.5ms)[0m  [1mSELECT "ingredients".* FROM "ingredients"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "quantities" ("recipe_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["recipe_id", 4], ["ingredient_id", 6], ["created_at", "2016-01-04 15:20:01.644623"], ["updated_at", "2016-01-04 15:20:01.644623"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "quantities" ("recipe_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["recipe_id", 4], ["ingredient_id", 7], ["created_at", "2016-01-04 15:20:01.647151"], ["updated_at", "2016-01-04 15:20:01.647151"]]
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "quantities" ("recipe_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["recipe_id", 4], ["ingredient_id", 8], ["created_at", "2016-01-04 15:20:01.648792"], ["updated_at", "2016-01-04 15:20:01.648792"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "quantities" ("recipe_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["recipe_id", 4], ["ingredient_id", 9], ["created_at", "2016-01-04 15:20:01.651268"], ["updated_at", "2016-01-04 15:20:01.651268"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "quantities" ("recipe_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["recipe_id", 4], ["ingredient_id", 10], ["created_at", "2016-01-04 15:20:01.653202"], ["updated_at", "2016-01-04 15:20:01.653202"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "quantities"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "quantities" ("ingredient_id", "recipe_id", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["ingredient_id", 6], ["recipe_id", 4], ["amount", 500], ["created_at", "2016-01-04 15:20:01.655702"], ["updated_at", "2016-01-04 15:20:01.655702"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+
+
+Started GET "/recipes/4" for ::1 at 2016-01-04 15:20:12 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mRecipe Load (0.7ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mIngredient Load (0.5ms)[0m  SELECT "ingredients".* FROM "ingredients" INNER JOIN "quantities" ON "ingredients"."id" = "quantities"."ingredient_id" WHERE "quantities"."recipe_id" = $1  [["recipe_id", 4]]
+  Rendered recipes/show.html.erb within layouts/application (49.6ms)
+Completed 200 OK in 254ms (Views: 217.6ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-04 15:20:13 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-04 15:20:13 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-04 15:20:13 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-04 15:20:13 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-04 15:20:13 +0000
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 15:20:17 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 6]]
+  Rendered recipes/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/recipes/4" for ::1 at 2016-01-04 15:20:19 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCategory Load (0.6ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mIngredient Load (0.5ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" INNER JOIN "quantities" ON "ingredients"."id" = "quantities"."ingredient_id" WHERE "quantities"."recipe_id" = $1[0m  [["recipe_id", 4]]
+  Rendered recipes/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/recipes/6" for ::1 at 2016-01-04 15:20:23 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mIngredient Load (0.4ms)[0m  SELECT "ingredients".* FROM "ingredients" INNER JOIN "quantities" ON "ingredients"."id" = "quantities"."ingredient_id" WHERE "quantities"."recipe_id" = $1  [["recipe_id", 6]]
+  Rendered recipes/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 1.0ms)
+  [1m[36mQuantity Load (0.6ms)[0m  [1mSELECT "quantities".* FROM "quantities"[0m
+
+
+Started GET "/recipes/4" for ::1 at 2016-01-04 15:23:27 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mIngredient Load (0.5ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" INNER JOIN "quantities" ON "ingredients"."id" = "quantities"."ingredient_id" WHERE "quantities"."recipe_id" = $1[0m  [["recipe_id", 4]]
+  Rendered recipes/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/recipes/4" for ::1 at 2016-01-04 15:24:31 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mIngredient Load (0.4ms)[0m  SELECT "ingredients".* FROM "ingredients" INNER JOIN "quantities" ON "ingredients"."id" = "quantities"."ingredient_id" WHERE "quantities"."recipe_id" = $1  [["recipe_id", 4]]
+  Rendered recipes/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-04 15:24:31 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-04 15:24:31 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-04 15:24:31 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-04 15:24:31 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-04 15:24:31 +0000
+
+
+Started GET "/recipes/4" for ::1 at 2016-01-04 15:24:46 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mIngredient Load (0.4ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" INNER JOIN "quantities" ON "ingredients"."id" = "quantities"."ingredient_id" WHERE "quantities"."recipe_id" = $1[0m  [["recipe_id", 4]]
+  Rendered recipes/show.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (undefined method `quantity' for 6:Fixnum):
+     7: 
+     8: <h3>Ingredients:</h3>
+     9: <% @recipe.ingredients.each do |ingredient| %>
+    10:   <p><%= ingredient.id.quantity %></p>
+    11:   <p><%= ingredient.name %></p>
+    12: <% end %>
+    13: 
+  app/views/recipes/show.html.erb:10:in `block in _app_views_recipes_show_html_erb__729296530878367544_70136569973400'
+  app/views/recipes/show.html.erb:9:in `_app_views_recipes_show_html_erb__729296530878367544_70136569973400'
+
+
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.6ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (12.6ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/user/.rbenv/versions/2.1.4/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (27.8ms)
+
+
+Started GET "/recipes/4" for ::1 at 2016-01-04 15:25:48 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT "ingredients".* FROM "ingredients" INNER JOIN "quantities" ON "ingredients"."id" = "quantities"."ingredient_id" WHERE "quantities"."recipe_id" = $1  [["recipe_id", 4]]
+  Rendered recipes/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-04 15:25:48 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-04 15:25:48 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-04 15:25:48 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-04 15:25:48 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-04 15:25:48 +0000
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 15:31:32 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 6]]
+  Rendered recipes/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 36ms (Views: 28.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/recipes/4" for ::1 at 2016-01-04 15:31:42 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" INNER JOIN "quantities" ON "ingredients"."id" = "quantities"."ingredient_id" WHERE "quantities"."recipe_id" = $1[0m  [["recipe_id", 4]]
+  Rendered recipes/show.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 34ms (Views: 29.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 15:31:45 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  Rendered recipes/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.9ms)
