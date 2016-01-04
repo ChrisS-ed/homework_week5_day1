@@ -13196,3 +13196,618 @@ Processing by RecipesController#show as HTML
   [1m[35mIngredient Load (0.7ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 20]]
   Rendered recipes/show.html.erb within layouts/application (32.3ms)
 Completed 200 OK in 56ms (Views: 48.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/recipes/10" for ::1 at 2016-01-04 16:31:25 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mQuantity Load (0.2ms)[0m  [1mSELECT "quantities".* FROM "quantities" WHERE "quantities"."recipe_id" = $1[0m  [["recipe_id", 10]]
+  [1m[35mIngredient Load (0.3ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mIngredient Load (0.3ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 20]]
+  Rendered recipes/show.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 60ms (Views: 44.0ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-04 16:31:25 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-04 16:31:25 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-04 16:31:25 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-04 16:31:25 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-04 16:31:25 +0000
+
+
+Started GET "/recipes/10" for ::1 at 2016-01-04 16:31:56 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mQuantity Load (0.3ms)[0m  [1mSELECT "quantities".* FROM "quantities" WHERE "quantities"."recipe_id" = $1[0m  [["recipe_id", 10]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 20]]
+  Rendered recipes/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-04 16:31:56 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-04 16:31:56 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-04 16:31:56 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-04 16:31:56 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-04 16:31:56 +0000
+
+
+Started GET "/recipes/10" for ::1 at 2016-01-04 16:32:11 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mQuantity Load (0.3ms)[0m  [1mSELECT "quantities".* FROM "quantities" WHERE "quantities"."recipe_id" = $1[0m  [["recipe_id", 10]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 20]]
+  Rendered recipes/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-04 16:32:11 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-04 16:32:11 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-04 16:32:11 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-04 16:32:11 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-04 16:32:11 +0000
+
+
+Started GET "/recipes/10" for ::1 at 2016-01-04 16:35:54 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mQuantity Load (0.3ms)[0m  [1mSELECT "quantities".* FROM "quantities" WHERE "quantities"."recipe_id" = $1[0m  [["recipe_id", 10]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mIngredient Load (0.4ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 20]]
+  Rendered recipes/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-04 16:35:54 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-04 16:35:54 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-04 16:35:54 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-04 16:35:54 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-04 16:35:54 +0000
+
+
+Started GET "/recipes/new" for ::1 at 2016-01-04 16:37:36 +0000
+Processing by RecipesController#new as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered recipes/new.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 50ms (Views: 45.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:37:53 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recipes/new" for ::1 at 2016-01-04 16:38:05 +0000
+Processing by RecipesController#new as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered recipes/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:38:48 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 39ms (Views: 31.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-04 16:38:48 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-04 16:38:48 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-04 16:38:48 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-04 16:38:48 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-04 16:38:48 +0000
+
+
+Started GET "/categories/10" for ::1 at 2016-01-04 16:38:50 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" WHERE "recipes"."category_id" = $1  [["category_id", 10]]
+  Rendered categories/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes/10" for ::1 at 2016-01-04 16:38:53 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mQuantity Load (0.3ms)[0m  [1mSELECT "quantities".* FROM "quantities" WHERE "quantities"."recipe_id" = $1[0m  [["recipe_id", 10]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 20]]
+  Rendered recipes/show.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 43ms (Views: 36.6ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/recipes/10" for ::1 at 2016-01-04 16:42:23 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mQuantity Load (0.2ms)[0m  [1mSELECT "quantities".* FROM "quantities" WHERE "quantities"."recipe_id" = $1[0m  [["recipe_id", 10]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 20]]
+  Rendered recipes/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 40ms (Views: 36.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.self-6496fbb5a2b8db16c023bba2895b5bf054404c35abbb15827b12a758d9b24714.css?body=1" for ::1 at 2016-01-04 16:42:23 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-04 16:42:23 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-04 16:42:23 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-04 16:42:23 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-04 16:42:23 +0000
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:42:50 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  [1m[35mCategory Load (0.5ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/recipes/11" for ::1 at 2016-01-04 16:43:02 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mQuantity Load (0.2ms)[0m  [1mSELECT "quantities".* FROM "quantities" WHERE "quantities"."recipe_id" = $1[0m  [["recipe_id", 11]]
+  Rendered recipes/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:43:11 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:45:36 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-66fb90ee0c13b71287ec69195a728ad41f9e3576a887923898e3e40f1c72bc38.css?body=1" for ::1 at 2016-01-04 16:45:36 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-04 16:45:36 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-04 16:45:36 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-04 16:45:37 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-04 16:45:37 +0000
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:45:38 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-04 16:45:38 +0000
+
+
+Started GET "/assets/application.self-66fb90ee0c13b71287ec69195a728ad41f9e3576a887923898e3e40f1c72bc38.css?body=1" for ::1 at 2016-01-04 16:45:38 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-04 16:45:38 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-04 16:45:38 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-04 16:45:38 +0000
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:45:40 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:45:42 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.4ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:45:42 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:45:42 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:45:43 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.4ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:45:43 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:45:43 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:45:44 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/categories/10" for ::1 at 2016-01-04 16:45:45 +0000
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes" WHERE "recipes"."category_id" = $1[0m  [["category_id", 10]]
+  Rendered categories/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:45:47 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:45:47 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:45:49 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-66fb90ee0c13b71287ec69195a728ad41f9e3576a887923898e3e40f1c72bc38.css?body=1" for ::1 at 2016-01-04 16:45:49 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-04 16:45:49 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-04 16:45:49 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-04 16:45:49 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-04 16:45:49 +0000
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:45:51 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/10" for ::1 at 2016-01-04 16:45:53 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mQuantity Load (0.3ms)[0m  SELECT "quantities".* FROM "quantities" WHERE "quantities"."recipe_id" = $1  [["recipe_id", 10]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1[0m  [["id", 18]]
+  [1m[35mIngredient Load (0.1ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  Rendered recipes/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:46:09 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:46:31 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 55ms (Views: 53.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-01-04 16:46:31 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-04 16:46:31 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-01-04 16:46:31 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-04 16:46:31 +0000
+
+
+Started GET "/assets/application.self-08448e3d7b06248cbdb3998b4797d4dd6ae04d3b58618329b508af03e9278258.css?body=1" for ::1 at 2016-01-04 16:46:31 +0000
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:46:33 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/recipes/10" for ::1 at 2016-01-04 16:46:34 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mQuantity Load (0.2ms)[0m  SELECT "quantities".* FROM "quantities" WHERE "quantities"."recipe_id" = $1  [["recipe_id", 10]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 17]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1[0m  [["id", 18]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1[0m  [["id", 20]]
+  Rendered recipes/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 30ms (Views: 26.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:47:28 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:47:28 +0000
+Processing by RecipesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-e9b9cb9c6c26f53b0f93420a79071f3140388d053c85fcd1a43c55f8b29693c2.css?body=1" for ::1 at 2016-01-04 16:47:28 +0000
+
+
+Started GET "/recipes/11" for ::1 at 2016-01-04 16:47:36 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mQuantity Load (0.2ms)[0m  SELECT "quantities".* FROM "quantities" WHERE "quantities"."recipe_id" = $1  [["recipe_id", 11]]
+  Rendered recipes/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 23ms (Views: 20.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:47:42 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/10" for ::1 at 2016-01-04 16:47:44 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mQuantity Load (0.2ms)[0m  [1mSELECT "quantities".* FROM "quantities" WHERE "quantities"."recipe_id" = $1[0m  [["recipe_id", 10]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 20]]
+  Rendered recipes/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 27ms (Views: 23.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:47:57 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (1.0ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 53ms (Views: 49.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/recipes" for ::1 at 2016-01-04 16:47:57 +0000
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 12]]
+  Rendered recipes/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/recipes/10" for ::1 at 2016-01-04 16:47:59 +0000
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mQuantity Load (0.2ms)[0m  [1mSELECT "quantities".* FROM "quantities" WHERE "quantities"."recipe_id" = $1[0m  [["recipe_id", 10]]
+  [1m[35mIngredient Load (0.2ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1[0m  [["id", 17]]
+  [1m[35mIngredient Load (0.4ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 18]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mIngredient Load (0.3ms)[0m  SELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT 1  [["id", 20]]
+  Rendered recipes/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 1.9ms)

@@ -7,8 +7,7 @@
 
 <h3>Ingredients:</h3>
 <% @recipe.quantities.each do |quantity| %>
-  <p><%= quantity.ingredient.name %></p>
-  <p><%= quantity.amount %></p>
+  <p><%= quantity.amount %> <%= quantity.ingredient.name %></p>
 <% end %>
 
 <h3>Instructions:</h3>
